@@ -1,0 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 16 100% 50%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 16 100% 50%;
+  --radius: 0.5rem;
+
+  /* Custom colors */
+  --sidebar: 0 0% 100%;
+  --sidebar-foreground: 240 10% 3.9%;
+  --sidebar-border: 240 5.9% 90%;
+  --sidebar-accent: 240 4.8% 95.9%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 16 100% 50%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 16 100% 50%;
+
+  /* Custom colors */
+  --sidebar: 240 10% 3.9%;
+  --sidebar-foreground: 0 0% 98%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-accent: 240 3.7% 15.9%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground min-h-screen antialiased;
+  }
+}
+
+/* ===== NAVIGATION STYLES ===== */
+.navigation-item {
+  @apply flex items-center gap-2 px-3 py-2 rounded-md text-sm;
+  @apply transition duration-200;
+}
+
+.navigation-item-active {
+  @apply bg-orange-50 text-orange-700 font-medium;
+}
+
+.navigation-item-inactive {
+  @apply text-sidebar-foreground hover:bg-sidebar-accent;
+}
+
+/* ===== GLASS CARD EFFECT ===== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+}
+
+
+@layer components {
+  .stat-card {
+    @apply relative overflow-hidden p-6 rounded-xl glass-card;
+  }
+
+  .stat-card-title {
+    @apply text-sm font-medium text-muted-foreground mb-1;
+  }
+
+  .stat-card-value {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+
+  .stat-card-badge {
+    @apply absolute top-3 right-3 px-2 py-1 text-xs font-medium rounded-full;
+  }
+
+  .navigation-item {
+    @apply flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors;
+  }
+
+  .navigation-item-inactive {
+    @apply text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent;
+  }
+
+  .navigation-item-active {
+    @apply text-sidebar-foreground bg-sidebar-accent;
+  }
+
+  .dashboard-section {
+    @apply mb-8;
+  }
+
+  .dashboard-section-title {
+    @apply text-lg font-semibold mb-4;
+  }
+
+  .dashboard-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4;
+  }
+
+  .dashboard-chart-container {
+    @apply p-4 bg-white rounded-xl shadow-sm border border-border;
+  }
+
+  .data-table-container {
+    @apply rounded-xl overflow-hidden border border-border bg-white/80 backdrop-blur-sm;
+  }
+
+  .data-table {
+    @apply w-full;
+  }
+
+  .data-table th {
+    @apply bg-secondary/50 px-4 py-3 text-left text-sm font-medium text-muted-foreground tracking-tight;
+  }
+
+  .data-table td {
+    @apply px-4 py-3 text-sm border-t border-border;
+  }
+
+  /* Status badges */
+  .status-badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  .status-pending {
+    @apply bg-amber-100 text-amber-800;
+  }
+
+  .status-approved {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .status-rejected {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .status-scheduled {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .status-in-progress {
+    @apply bg-indigo-100 text-indigo-800;
+  }
+
+  .status-completed {
+    @apply bg-emerald-100 text-emerald-800;
+  }
+
+  .status-failed {
+    @apply bg-rose-100 text-rose-800;
+  }
+
+  /* Form elements */
+  .form-container {
+    @apply space-y-6 p-6 bg-white rounded-xl shadow-sm border border-border;
+  }
+
+  .form-section {
+    @apply space-y-4;
+  }
+
+  .form-section-title {
+    @apply text-xl font-semibold text-gray-900;
+  }
+
+  .form-group {
+    @apply space-y-2;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+
+  .form-input {
+    @apply w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-primary focus:ring-primary;
+  }
+
+  .form-actions {
+    @apply flex justify-end space-x-3 pt-4;
+  }
+
+  /* Button variants */
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
+  }
+
+  .btn-outline {
+    @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground;
+  }
+
+  .btn-destructive {
+    @apply bg-destructive text-destructive-foreground hover:bg-destructive/90;
+  }
+}

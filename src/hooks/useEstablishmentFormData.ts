@@ -1,0 +1,33 @@
+interface FormData {
+    dti_number: string;
+    establishmentName: string;
+    type: string;
+    occupancy: string;
+    storeys: string;
+    floor_area: string;
+    occupants: string;
+    owner_first_name: string;
+    owner_last_name: string;
+    owner_middle_name: string;
+    owner_suffix: string;
+    owner_email: string;
+    owner_mobile: string;
+    owner_landline: string;
+    rep_first_name: string;
+    rep_last_name: string;
+    rep_middle_name: string;
+    rep_suffix: string;
+    rep_email: string;
+    rep_mobile: string;
+    rep_landline: string;
+    street: string;
+    barangay: string;
+    city: string;
+    province: string;
+    region: string;
+    latitude: number | null;
+    longitude: number | null;
+    contractorName: string;
+    fsecNumber: string;
+    occupancyPermitNo: string;
+  }
