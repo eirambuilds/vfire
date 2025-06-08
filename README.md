@@ -1,69 +1,35 @@
-# Welcome to your Lovable project
+# Welcome to VFire Inspect
 
-## Project info
+## Technologies Used
 
-**URL**: https://lovable.dev/projects/d38c730a-9c78-4e96-953f-4ed59bd9a02c
+This project is built with:
 
-## How can I edit this code?
+* Vite
+* TypeScript
+* React
+* shadcn-ui
+* Tailwind CSS
 
-There are several ways of editing your application.
+## Deployment
 
-**Use Lovable**
+The site is deployed via GitHub Pages and hosted at:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d38c730a-9c78-4e96-953f-4ed59bd9a02c) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+https://eirambuilds.github.io
 ```
 
-**Edit a file directly in GitHub**
+<!-- To update the live site, simply build and push changes to the repository:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run build
+git add .
+git commit -m "Update portfolio"
+git push origin main
+``` -->
 
-**Use GitHub Codespaces**
+## Contact & Support
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+For questions or issues related to this project, please reach out to me at:
 
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d38c730a-9c78-4e96-953f-4ed59bd9a02c) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+**Email:** [eirambuilds@gmail.com](mailto:eirambuilds@gmail.com)
+**Website:** [https://www.eirambuilds.online](https://www.eirambuilds.github.io)

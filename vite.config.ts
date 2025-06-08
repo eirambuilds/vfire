@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/vfire-inspect/", // Changed to match repository name for GitHub Pages
+  base: process.env.VITE_BASE_PATH || "/vfire", // Changed to root for user site
   server: {
     host: "::",
     port: 8080,
